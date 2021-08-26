@@ -27,8 +27,14 @@ public class ContacturaController {
 	//listar todos
 	
 	@GetMapping
-	public List findAll() {
-		return repository.findAll();
+	public List<?> findAll() {
+		return repository.findAllContactura();
+	}
+	
+	//find by name
+	@GetMapping("filtro/{name}")
+	public List<Contactura> find(@PathVariable String name){
+		return repository.findByName(name);
 	}
 	
 	
