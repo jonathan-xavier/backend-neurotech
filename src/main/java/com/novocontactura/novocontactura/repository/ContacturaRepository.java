@@ -12,7 +12,7 @@ import com.novocontactura.novocontactura.model.Contactura;
 public interface ContacturaRepository extends JpaRepository<Contactura, Long> {
 	
 	
-	
+	//teste para buscar por nome
 	@Query(value = "SELECT * FROM contactura WHERE name = ?1", nativeQuery = true)
 	public List<Contactura> findByName(String name);
 	

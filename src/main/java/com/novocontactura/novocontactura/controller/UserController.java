@@ -28,7 +28,7 @@ public class UserController {
 	//metodo para buscar todos.
 	@GetMapping
 	public List<ContacturaUser> findAll(){
-		return repository.findAll(); 
+		return repository.findAllUser();
 	}
 	
 	
