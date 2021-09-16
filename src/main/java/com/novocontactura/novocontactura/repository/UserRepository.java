@@ -12,5 +12,7 @@ public interface UserRepository extends JpaRepository<ContacturaUser, Long> {
 	//pesquisa customizada
 	@Query(value = "SELECT * FROM contactura_user", nativeQuery = true)
 	public List<ContacturaUser> findAllUser();
+	
+	ContacturaUser findByUsername(String username);
 
 }
